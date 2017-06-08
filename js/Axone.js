@@ -58,7 +58,7 @@ var Axone = {
           i18n_translate("append") + ' random_word(), random_word()',
           i18n_translate("figureOut") + ' random_word(), random_word(), random_word(), random_word()',
           i18n_translate("draw") + ' random_word()',
-          i18n_translate("tell") + ' random_word(), random_word(), рассказать о слове random_word()',
+          i18n_translate("tell") + ' random_word(), random_word(), ' + i18n_translate("use") + ' random_word()',
 
           i18n_translate("40sum") + ' random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()'
         ];
@@ -74,7 +74,7 @@ var Axone = {
                 return parseInt(Math.random() * 99)
             })
             .replace(/\+/g, function() {
-                return ' плюс '
+                return ' ' + i18n_translate("plus") + ' '
             })
         ;
 

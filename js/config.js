@@ -13,7 +13,9 @@
       "append": "соединить 2 слова максимально возможным количеством способов: ",
       "figureOut": "придумать историю использующую слова: ",
       "draw": "нарисовать ",
-      "tell": "используя слова: "
+      "use": "используя слова: ",
+      "tell": "рассказать о слове",
+      "plus": "плюс"
     }
   };
 
@@ -27,7 +29,9 @@
       "append": "connect 2 words in as many ways as possible:",
       "figureOut": "think of a story using words:",
       "draw": "draw",
-      "tell": "using the words:"
+      "use": "using the words:",
+      "tell": "tell about word",
+      "plus": "plus"
     }
   };
 
