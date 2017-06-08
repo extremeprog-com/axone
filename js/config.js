@@ -3,6 +3,7 @@
  */
 
 (function () {
+  "use strict";
 
   var exercises_ru = {
     values: {
@@ -15,7 +16,8 @@
       "draw": "нарисовать ",
       "use": "используя слова: ",
       "tell": "рассказать о слове",
-      "plus": "плюс"
+      "plus": "плюс",
+      "axone_title": "нарисуй за 2 минуты"
     }
   };
 
@@ -31,7 +33,8 @@
       "draw": "draw",
       "use": "using the words:",
       "tell": "tell about word",
-      "plus": "plus"
+      "plus": "plus",
+      "axone_title": "draw it 2 minutes"
     }
   };
 
@@ -43,5 +46,21 @@
     if (LANG == "EN") return en(str);
     if (LANG == "RU") return ru(str);
   }
+
+  $(document).ready(function () {
+  //   var source = $("#entry-template").html();
+  //   var context = {axoneTitle: i18n_translate("axone_title")};
+  //   var template = Handlebars.compile(source);
+  //   var html = template(context);
+  //
+  //
+  //   console.log(html);
+  //   // Handlebars.registerHelper('axoneTitle', function(text, url) {
+  //   //   return new Handlebars.SafeString(i18n_translate("axone_title"));
+  //   // })
+
+    $("#phrase-tip").text(i18n_translate("axone_title"))
+
+  });
 })();
 
