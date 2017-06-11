@@ -14,7 +14,7 @@ var Axone_Voice = {
             //this.currentAudioTrack = new Audio('http://proxy.k01.extremeprog.ru/translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=t&prev=input&q=' + event.phrase + '&tl=' + (window.LANG == 'RU'?'ru':'en'));
             //this.currentAudioTrack.play();
         this.currentAudioTrack = new SpeechSynthesisUtterance(event.phrase);
-        this.currentAudioTrack.lang = 'ru';
+        this.currentAudioTrack.lang = LANG.toLowerCase();
         speechSynthesis.speak(this.currentAudioTrack);
     }
 };
