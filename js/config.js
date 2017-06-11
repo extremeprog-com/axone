@@ -28,7 +28,11 @@
       "tips": "Понравилось упражнение? Расскажи о нем своим друзьям.",
       "end_description": "Фотографируй рисунки, которые тебе понравились больше всего, и выкладывай в Instagram с тэгом \<a href=\"https:\/\/instagram.com\/explore\/tags\/crazydrawin/\" target=\"_blank\" style=\"color: \#D0021B;\"\>\#crazydrawin\<\/a\>",
       "repeat": "Повторить упражнение",
-      "end_logo": "Упражнение закончено"
+      "end_logo": "Упражнение закончено",
+      "about_hed": "О нас",
+      "contacts_description": "Мы любим делать интересные и полезные инструменты для людей, которым нравится экспериментировать и пробовать новые возможности для креативного подхода к созданию продуктов.",
+      "name_1": "Сергиенко Олег",
+      "name_2": "Мурзина Александра"
     }
   };
 
@@ -56,7 +60,11 @@
       "tips": "Did you like the exercise? Tell about it to your friends.",
       "end_description": "Take pictures of the pictures that you liked most, and lay out in Instagram with a tag \<a href=\"https:\/\/instagram.com\/explore\/tags\/crazydrawin/\" target=\"_blank\" style=\"color: \#D0021B;\"\>\#crazydrawin\<\/a\>",
       "repeat": "Repeat exercise",
-      "end_logo": "Exercise is over"
+      "end_logo": "Exercise is over",
+      "about_hed": "About us",
+      "contacts_description": "We love to make interesting and useful tools for people who like to experiment and try new opportunities for a creative approach to creating products.",
+      "name_1": "Sergienko Oleg",
+      "name_2": "Mourzina Alexandra"
     }
   };
 
@@ -82,6 +90,11 @@
     $("#pause-title").text(i18n_translate("pause_title"));
     $("#tips").text(i18n_translate("tips"));
     $("#logo.ended").text(i18n_translate("end_logo"));
+    $("#logo.contacts").text(i18n_translate("about_hed"));
+    $(".contacts_description").text(i18n_translate("contacts_description"));
+    $("#return-mainpage").text(i18n_translate("link_1"));
+    $("#name_1").text(i18n_translate("name_1"));
+    $("#name_2").text(i18n_translate("name_2"));
   });
 
 
