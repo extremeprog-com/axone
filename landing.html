@@ -16,11 +16,19 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
 
     <link rel="shortcut icon"  href="img/favicon.png" type="image/x-icon"/>
+
+    <script src="lib/jquery.min.js" type="text/javascript"></script>
+    <script src="lib/i18n.js"></script>
+    <script src="js/config.js"></script>
     <script type="text/javascript">
         LANG = 'RU';
     </script>
 </head>
 <body>
+<select id="lang">
+    <option value="EN">English</option>
+    <option value="RU">Russian</option>
+</select>
     <div id="main-container">
         <div id="circles-container">
             <div id="red-circle"></div>
@@ -29,7 +37,7 @@
             <div id="yellow-circle"></div>
         </div>
         <div id="text-wrap">
-            <div id="logo">CrazyDrawing</div>
+            <div id="logo">Axone</div>
 
             <script>
                 var chooseStartPhrase = localStorage.chooseStartPhrase;
@@ -40,40 +48,26 @@
 
             </script>
 
-            <div id="description">Это упражнение для того, чтобы выйти из творческого ступора и вовлечься в процесс создания оригинальных и необычных идей.</div>
+            <div class="start_description" id="description"></div>
 
-            <div id="tips">
-                <script>
-                    if(chooseStartPhrase == 'a') {
-                        document.write('Возьми бумагу и карандаш. Приложение будет выдавать по 2 случайных слова – нарисуй сюжет, который их связывает. <br/>По 2 минуты на рисунок.');
-                    }
-                    if(chooseStartPhrase == 'b') {
-                        document.write('Возьми бумагу и карандаш. Приготовься иллюстрировать случайные необычные фразы. 10 фраз, по 2 минуты каждая.');
-                    }
-                </script>
-            </div>
+            <!--&lt;!&ndash;<div id="tips">&ndash;&gt;-->
+                <!--&lt;!&ndash;<script>&ndash;&gt;-->
+<!--//                    if(chooseStartPhrase == 'a') {-->
+<!--//                        document.write('Возьми бумагу и карандаш. Приложение будет выдавать по 2 случайных слова – нарисуй сюжет, который их связывает. <br/>По 2 минуты на рисунок.');-->
+<!--//                    }-->
+<!--//                    if(chooseStartPhrase == 'b') {-->
+<!--//                        document.write('Возьми бумагу и карандаш. Приготовься иллюстрировать случайные необычные фразы. 10 фраз, по 2 минуты каждая.');-->
+<!--//                    }-->
+<!--&lt;!&ndash;//                </script>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
             <div id="action-button">
-                <script>
-                    if(chooseStartPhrase == 'a') {
-                        document.write('<a href="/exercise?p=b">Рисовать слова дня</a> <a style="margin-left: 20px;" href="/exercise?p=b&random">Рисовать случайные слова</a>');
-                    }
-                    if(chooseStartPhrase == 'b') {
-                        document.write('<a style="padding-left: 1.4em; padding-right: 1.4em;" href="/exercise?p=a">Рисовать фразы дня</a> <a style="margin-left: 20px; padding-left: 1.4em; padding-right: 1.4em;" href="/exercise?p=a&random">Рисовать случайные фразы</a>');
-                    }
-                </script>
-
+                <a class="boosting" href="axone.html?p=b&random"></a>
             </div>
-            <script>
-                if(chooseStartPhrase == 'a') {
-                    document.write('<div id="tips">Заходи и тренируйся каждый день, зови друзей, фотографируй и размещай необычные рисунки в любимой соцсети с тегом #crazydrawin и показывай их другим, ставь и получай лайки</div>');
-                }
-            </script>
         </div>
         <div id="footer" style="text-align: left; left: 6.2em;">
-            <a href="/contacts" id="contact-link">© Friend Inc. 2015</a>
+            <a href="http://friend-inc.com" target="_blank" id="contact-link">© Friend Inc. 2015</a>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            Instagram: <a href="https://instagram.com/explore/tags/crazydrawin/" target="_blank" style="color: #D0021B;">#crazydrawin</a>
             <a id="main-share-facebook" target="_blank" href="https://www.facebook.com/dialog/feed?app_id=1420208668249213&display=popup&caption=%23crazydrawin Выходи из творческого ступора, включай воображение и вливайся в процесс создания оригинальных и необычных идей!&link=http://crazydraw.in/&redirect_uri=http://crazydraw.in/"></a>
             <a id="main-share-twitter"  target="_blank" href="https://twitter.com/intent/tweet?url=http://crazydraw.in&text=Выходи из творческого ступора, включай воображение и вливайся в процесс создания оригинальных идей&hashtags=crazydrawin"></a>
             <a id="main-share-vk"       target="_blank" href="http://vk.com/share.php?url=http://crazydraw.in&title=Выходи из творческого ступора, включай воображение и вливайся в процесс создания необычных и оригинальных идей! %23crazydrawin"></a>
@@ -96,6 +90,10 @@
                                        <!--style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:29671210,lang:'ru'});return false}catch(e){}"/></a>-->
 <!--&lt;!&ndash; /Yandex.Metrika informer &ndash;&gt;-->
 
+<script id="entry-template" type="text/x-handlebars-template">
+
+</script>
+<script src="js/lang_control.js"></script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {

@@ -11,14 +11,14 @@
     window.LANG = window.localStorage.getItem("AXONE_LANG");
   }
   setSelectedLang(window.LANG);
-  chooseWordsArr();
+  if (typeof words !== "undefined") chooseWordsArr();
 
   $("#lang").change(function () {
     console.log("changed!");
     var oldLang = window.LANG;
     window.LANG = $(this).val();
     window.localStorage.setItem("AXONE_LANG", window.LANG);
-    chooseWordsArr(window.LANG);
+    if (typeof words !== "undefined") chooseWordsArr(window.LANG);
 
     if (oldLang !== window.LANG) {
       location.reload();

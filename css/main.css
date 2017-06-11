@@ -100,7 +100,7 @@ body { background-color: #D0021B; color: #4E4C4C;  }
         transform: translate(-50%, -75%); visibility: hidden; max-width: 40em; }
 
         #phrase-tip { color: #9B9B9B; font-size: 2em; font-weight: 300; line-height: 1em;}
-        #phrase { font-size: 4.750em; font-weight: 300; line-height: 0.9em; }
+        #phrase { /*font-size: 4.750em;*/ font-size: 2em; font-weight: 300; line-height: 0.9em; }
 
         #pause-wrap ul li { list-style-type: none; display: inline-block; font-size: 1.5em; margin-top: 1em; margin-bottom: 3em; margin-left: 6em; }
         #pause-wrap ul li:first-child { margin-left: 0; }
@@ -108,9 +108,9 @@ body { background-color: #D0021B; color: #4E4C4C;  }
 
     #controls { position: absolute; bottom: 5.25em; text-align: center; width: 100%; }
         #controls div { cursor: pointer; display: inline-block; }
-        #play { width: 9em; height: 9em; margin-left: 6.25em; background: url("../img/Play.svg") no-repeat; background-size: contain; }
+        #play { width: 9em; height: 9em; margin-left: 5em; background: url("../img/Play.svg") no-repeat; background-size: contain; }
         #next { width: 3em; height: 3em; margin-left: 2em; margin-bottom: 3em; background: url('../img/Next.svg') no-repeat; background-size: contain; }
-
+        #controls a.stop {display: inline-block; width: 2.5em; height: 2.5em; border: 1px solid #D0021B; transform: translateY(-50%); position: absolute; top: 50%; background-color: rgba(208, 1, 27, 0.51)}
 
     #footer { text-align: center; position: absolute; bottom: 1.9em; width: 100%; font-size: 1.5em; }
         #footer #action-button { margin-bottom: 4em; }

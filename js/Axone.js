@@ -57,8 +57,8 @@ var Axone = {
           i18n_translate("poem") + ' random_word(), random_word()',
           i18n_translate("append") + ' random_word(), random_word()',
           i18n_translate("figureOut") + ' random_word(), random_word(), random_word(), random_word()',
-          i18n_translate("draw") + ' random_word()',
-          i18n_translate("tell") + ' random_word(), random_word(), ' + i18n_translate("use") + ' random_word()',
+          i18n_translate("draw") + ' \"random_word()\"',
+          i18n_translate("use") + ' random_word(), random_word(), ' + i18n_translate("tell") + ' random_word()',
 
           i18n_translate("40sum") + ' random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()'
         ];
@@ -84,6 +84,7 @@ var Axone = {
         //
         //localStorage.phrases = JSON.stringify(this.phrases);
 
+        setRandomColor();
         return exercise;
     }
 
