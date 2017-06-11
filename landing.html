@@ -50,19 +50,14 @@
 
             <div class="start_description" id="description"></div>
 
-            <!--&lt;!&ndash;<div id="tips">&ndash;&gt;-->
-                <!--&lt;!&ndash;<script>&ndash;&gt;-->
-<!--//                    if(chooseStartPhrase == 'a') {-->
-<!--//                        document.write('Возьми бумагу и карандаш. Приложение будет выдавать по 2 случайных слова – нарисуй сюжет, который их связывает. <br/>По 2 минуты на рисунок.');-->
-<!--//                    }-->
-<!--//                    if(chooseStartPhrase == 'b') {-->
-<!--//                        document.write('Возьми бумагу и карандаш. Приготовься иллюстрировать случайные необычные фразы. 10 фраз, по 2 минуты каждая.');-->
-<!--//                    }-->
-<!--&lt;!&ndash;//                </script>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
             <div id="action-button">
-                <a class="boosting" href="axone.html?p=b&random"></a>
+                <script>
+                  if(chooseStartPhrase == 'a') {
+                    document.write('\<a class=\"boosting\" href=\"axone?p=a&random\"\>\</a\>')
+                  } else if(chooseStartPhrase == 'b') {
+                    document.write('\<a class=\"boosting\" href=\"axone?p=b&random\"\>\</a\>')
+                  }
+                </script>
             </div>
         </div>
         <div id="footer" style="text-align: left; left: 6.2em;">
