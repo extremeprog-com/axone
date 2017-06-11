@@ -46,7 +46,7 @@ body { background-color: #D0021B; color: #4E4C4C;  }
            -moz-transition: all .8s ease, opacity .5s ease;
                 transition: all .8s ease, opacity .5s ease; }
 
-    .Paused #play { background: url("../img/PlayBut.svg") no-repeat; background-size: contain; }
+    /*.Paused #play { background: url("../img/PlayBut.svg") no-repeat; background-size: contain; }*/
 
 
     #grid { position: absolute; left: 4.4em; right: 4.4em; height: 2em; margin-top: 2.5em; }
@@ -108,7 +108,7 @@ body { background-color: #D0021B; color: #4E4C4C;  }
 
     #controls { position: absolute; bottom: 5.25em; text-align: center; width: 100%; }
         #controls div { cursor: pointer; display: inline-block; }
-        #play { width: 9em; height: 9em; margin-left: 5em; background: url("../img/Play.svg") no-repeat; background-size: contain; }
+        #play { width: 9em; height: 9em; margin-left: 5em; /*background: url("../img/Play.svg") no-repeat; background-size: contain;*/ }
         #next { width: 3em; height: 3em; margin-left: 2em; margin-bottom: 3em; background: url('../img/Next.svg') no-repeat; background-size: contain; }
         #controls a.stop {display: inline-block; width: 2.5em; height: 2.5em; border: 1px solid #D0021B; transform: translateY(-50%); position: absolute; top: 50%; background-color: rgba(208, 1, 27, 0.51)}
 

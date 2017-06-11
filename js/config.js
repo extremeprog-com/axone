@@ -120,6 +120,12 @@
 
     $("body").css({"background-color": color});
     $("#phrase-line").css({"background-color": changeAlpha(color, 0.6)});
+    $("#play>svg>g").css({
+      "stroke": color,
+    });
+    $("#play>svg path").css({
+      "fill": changeAlpha(color, 0.6)
+    });
     console.log(changeAlpha(color, 0.3))
   };
 
