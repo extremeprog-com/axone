@@ -29,6 +29,9 @@
       "end_description": "Фотографируй рисунки, которые тебе понравились больше всего, и выкладывай в Instagram с тэгом \<a href=\"https:\/\/instagram.com\/explore\/tags\/crazydrawin/\" target=\"_blank\" style=\"color: \#D0021B;\"\>\#crazydrawin\<\/a\>",
       "repeat": "Повторить упражнение",
       "end_logo": "Упражнение закончено",
+      "share_fb": "Поделиться в Facebook",
+      "share_vk": "Поделиться в Vkontakte",
+      "share_tw": "Поделиться в Twitter",
       "about_hed": "О нас",
       "contacts_description": "Мы любим делать интересные и полезные инструменты для людей, которым нравится экспериментировать и пробовать новые возможности для креативного подхода к созданию продуктов.",
       "name_1": "Сергиенко Олег",
@@ -61,6 +64,9 @@
       "end_description": "Take pictures of the pictures that you liked most, and lay out in Instagram with a tag \<a href=\"https:\/\/instagram.com\/explore\/tags\/crazydrawin/\" target=\"_blank\" style=\"color: \#D0021B;\"\>\#crazydrawin\<\/a\>",
       "repeat": "Repeat exercise",
       "end_logo": "Exercise is over",
+      "share_fb": "Share with Facebook",
+      "share_vk": "Share with Vkontakte",
+      "share_tw": "Share with Twitter",
       "about_hed": "About us",
       "contacts_description": "We love to make interesting and useful tools for people who like to experiment and try new opportunities for a creative approach to creating products.",
       "name_1": "Sergienko Oleg",
@@ -95,35 +101,31 @@
     $("#return-mainpage").text(i18n_translate("link_1"));
     $("#name_1").text(i18n_translate("name_1"));
     $("#name_2").text(i18n_translate("name_2"));
+    $("#share-facebook").text(i18n_translate("share_fb"));
+    $("#share-vk").text(i18n_translate("share_vk"));
+    $("#share-twitter").text(i18n_translate("share_tw"));
   });
 
 
-  window.setRandomColor = function() {
-    var color = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
-    var lightColor = ColorLuminance(color, 0.8);
+  window.setRandomColor = function () {
+    var colors = [
+      "rgba(75, 63, 114, 1)",
+      "rgba(134, 187, 216, 1)",
+      "rgba(255, 200, 87, 1)",
+      "rgba(255, 16, 83, 1)",
+      "rgba(169, 229, 187, 1)"
+    ];
+
+    var color = colors[Math.floor(Math.random()*colors.length)];
+
     $("body").css({"background-color": color});
-    $("#phrase-line").css({"background-color": lightColor});
+    $("#phrase-line").css({"background-color": changeAlpha(color, 0.6)});
+    console.log(changeAlpha(color, 0.3))
   };
 
-
-  function ColorLuminance(hex, lum) {
-
-    // validate hex string
-    hex = String(hex).replace(/[^0-9a-f]/gi, '');
-    if (hex.length < 6) {
-      hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
-    }
-    lum = lum || 0;
-
-    // convert to decimal and change luminosity
-    var rgb = "#", c, i;
-    for (i = 0; i < 3; i++) {
-      c = parseInt(hex.substr(i*2,2), 16);
-      c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
-      rgb += ("00"+c).substr(c.length);
-    }
-
-    return rgb;
+  function changeAlpha (color, alpha) {
+    return color.replace(/[\d\.]+\)$/g, alpha + ')');
   }
+
 })();
 
