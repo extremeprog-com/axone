@@ -14,7 +14,7 @@ var Axone = {
     , _timeoutVar         : null
     , _currentPhraseNumber: 0
     , phrases: []
-    , NUM_PHRASES: 20
+    , NUM_PHRASES: 2000
 
     , init: function() {
         CatchEvent(Event_DOM_Init);
