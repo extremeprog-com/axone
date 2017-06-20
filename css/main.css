@@ -15,15 +15,16 @@ body { background-color: #D0021B; color: #4E4C4C;  }
         #purple-circle { position: absolute; width: 300px; height: 300px; border-radius: 50%; background-color: #b702d0; top: -208px; right: 580px; opacity: 0.4; }
         #yellow-circle { position: absolute; width: 300px; height: 300px; border-radius: 50%; background-color: #d0b702; top: -73px; right: -50px; opacity: 0.4; }
 
-    #text-wrap { position: absolute; top: 13em; left: 9.53em; width: 100%; }
-    #logo { font-size: 4.375em; }
-    #description { margin-top: 1.2em; line-height: 1.2em; font-size: 2em; width: 22em;  font-weight: 300; }
+    #text-wrap { position: absolute; top: 21em; left: 9.53em; width: 100%; }
+    #logo { font-size: 4.375em; font-weight: 800; }
+    #description { margin-top: 1.2em; line-height: 1.2em; font-size: 2em; width: 22em;  font-weight: 500; }
 
     .phrases-column { padding-right: 9em; color: #5B6B79; }
 
-    #tips { font-size: 1.5em; margin-top: 2.2em; width: 31em; line-height: 1.1em;   font-weight: 300;}
-    #action-button { margin-top: 2.4em; }
-        #action-button a { font-size: 1.5em; border: 3px solid #D0021B; color: #D0021B; text-align: center; padding: 1em 1.7em; text-decoration: none;}
+
+    #tips { font-size: 1.5em; margin-top: 6.2em; width: 31em; line-height: 1.1em;   font-weight: 300;}
+    #action-button { margin-top: 4.4em; }
+        #action-button a { font-size: 1.5em; border: 3px solid #D0021B; color: #D0021B; text-align: center; padding: 1em 1.7em; text-decoration: none; font-weight: 700;}
         #action-button a:hover { color: #fff; background-color: #D0021B;
             -webkit-transition: all .5s ease, opacity .5s ease;
                -moz-transition: all .5s ease, opacity .5s ease;
@@ -143,5 +144,5 @@ body { background-color: #D0021B; color: #4E4C4C;  }
 
 @media screen
 and (max-width: 700px) {
-    #text-wrap { position: absolute; top: 7em; left: 3.53em; width: 100%; }
+    #text-wrap { position: absolute; top: 13em; left: 3.53em; width: 100%; }
 }
