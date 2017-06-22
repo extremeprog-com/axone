@@ -17,9 +17,11 @@ var Axone_Controls = {
 
         $('#play').click(function() {
             if( _this._pauseState ) {
+                $(".ball").css("display", "inline-block");
                 _this._exerciseState.go('Playing');
                 FireEvent(new Axone_Controls_PlayClick());
             } else {
+                $(".ball").css("display", "none");
                 _this._exerciseState.go('Paused');
                 FireEvent(new Axone_Controls_PauseClick());
             }
