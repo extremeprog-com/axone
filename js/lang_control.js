@@ -5,6 +5,8 @@ var words, words_emotions;
 (function () {
   // language changing
 
+  var words, words_emotions;
+
   if (!window.localStorage["AXONE_LANG"]) {
     window.LANG = navigator.language !== "RU" ? "EN" : "RU";
     window.localStorage.setItem("AXONE_LANG", window.LANG);
