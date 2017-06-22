@@ -57,7 +57,7 @@ var Axone = {
           i18n_translate("poem") + ' random_word(), random_word()',
           i18n_translate("append") + ' random_word(), random_word()',
           i18n_translate("figureOut") + ' random_word(), random_word(), random_word(), random_word()',
-          i18n_translate("draw") + ' \"random_word()\"',
+          i18n_translate("draw") + ' \"random_words_emotions() random_word()\"',
           i18n_translate("use") + ' random_word(), random_word(), ' + i18n_translate("tell") + ' random_word()',
 
           i18n_translate("40sum") + ' random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()'
@@ -69,6 +69,9 @@ var Axone = {
         exercise = exercise
             .replace(/random_word\(\)/g, function(e, i) {
                 return randomArrayItem(words, Axone._currentPhraseNumber, i)
+            })
+            .replace(/random_words_emotions\(\)/g, function(e, i) {
+                return randomArrayItem(words_emotions, Axone._currentPhraseNumber, i)
             })
             .replace(/random_num\(\)/g, function() {
                 return parseInt(Math.random() * 99)

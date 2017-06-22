@@ -1,9 +1,10 @@
 /**
  * Created by trean on 09.06.17.
  */
-
+var words, words_emotions;
 (function () {
   // language changing
+
   if (!window.localStorage["AXONE_LANG"]) {
     window.LANG = navigator.language !== "RU" ? "EN" : "RU";
     window.localStorage.setItem("AXONE_LANG", window.LANG);
@@ -28,10 +29,10 @@
   function chooseWordsArr (lang) {
     if (window.LANG === "EN") {
       words = words_en;
-//      words_emotions = words_emotions_en;
+     words_emotions = words_emotions_en;
     } else if (window.LANG === "RU") {
       words = words_ru;
-//      words_emotions = words_emotions_ru;
+     words_emotions = words_emotions_ru;
     }
 
 
