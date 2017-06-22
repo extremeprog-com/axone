@@ -142,7 +142,6 @@
       "stroke": color,
       "fill": changeAlpha(color, 0.6)
     });
-    console.log(changeAlpha(color, 0.3))
   };
 
   function changeAlpha (color, alpha) {

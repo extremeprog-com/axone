@@ -29,6 +29,7 @@ var Axone = {
     , generateExercise: function() {
 
         function randomArrayItem(array, num, local_num) {
+            console.log(num, local_num);
 
             if(local_num) {
                 num += 101 * local_num;
@@ -48,23 +49,28 @@ var Axone = {
             return array[random];
         }
 
+        function nextArrayItem(array, num) {
+            num = num % array.length;
+            return array[num];
+        }
+
         var exercises = [
             //'посчитать 20 сумм: random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()',
            //'посчитать 5 сумм: random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()',
 
+            i18n_translate("40sum") + ' random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()',
           i18n_translate("remember7-1") + ' random_num(), random_num(), random_num(), random_num(), random_num(), random_num(), random_num()',
           i18n_translate("remember7-2") + ' random_word(), random_word(), random_word(), random_word(), random_word(), random_word(), random_word()',
           i18n_translate("poem") + ' random_word(), random_word()',
           i18n_translate("append") + ' random_word(), random_word()',
           i18n_translate("figureOut") + ' random_word(), random_word(), random_word(), random_word()',
           i18n_translate("draw") + ' \"random_words_emotions() random_word()\"',
-          i18n_translate("use") + ' random_word(), random_word(), ' + i18n_translate("tell") + ' random_word()',
-
-          i18n_translate("40sum") + ' random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()'
+          i18n_translate("use") + ' random_word(), random_word(), ' + i18n_translate("tell") + ' random_word()'
         ];
 
 
-        var exercise = randomArrayItem(exercises, Axone._currentPhraseNumber);
+        // var exercise = randomArrayItem(exercises, Axone._currentPhraseNumber);
+        var exercise = nextArrayItem(exercises, Axone._currentPhraseNumber);
 
         exercise = exercise
             .replace(/random_word\(\)/g, function(e, i) {
