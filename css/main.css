@@ -144,5 +144,5 @@ body { background-color: #D0021B; color: #4E4C4C;  }
 
 @media screen
 and (max-width: 700px) {
-    #text-wrap { position: absolute; top: 13em; left: 3.53em; width: 100%; }
+    #text-wrap { position: absolute; top: 13em; left: calc(3.53em + 2rem); width: 100%; }
 }
