@@ -108,13 +108,13 @@ body { background-color: #D0021B; color: #4E4C4C;  }
         #pause-wrap ul li:first-child { margin-left: 0; }
             #pause-wrap ul li a { color: #4E4C4C; }
 
-    #controls { position: absolute; bottom: 5.25em; text-align: center; width: 100%; }
+    #controls { position: absolute; bottom: 5.25em; text-align: center; width: 100%; margin-left: -2.4em; }
         #controls div { cursor: pointer; display: inline-block; }
-        #play { width: 9em; height: 9em; margin-left: 5em; }
+        #play { /* width: 9em; height: 9em; */ margin-left: 5em; }
             #play .play {
                 display: none;
             }
-        #next { margin-left: 5.7em; position: absolute; top: 50%; transform: translateY(-49%); }
+        #next { margin-left: 2.23em; position: absolute; top: 50%; transform: translateY(-49%); }
         #controls a.stop {display: inline-block; width: 2.5em; height: 2.5em; border: 1px solid #D0021B; transform: translateY(-50%); position: absolute; top: 50%; background-color: rgba(208, 1, 27, 0.51)}
 
     #footer { text-align: center; position: absolute; bottom: 1.3em; width: 100%; font-size: 1.5em; }
