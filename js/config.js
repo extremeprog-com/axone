@@ -7,7 +7,9 @@
 
   var exercises_ru = {
     values: {
-      "description": "Усильте свой ум ежедневными упражнениями",
+      "start_description_1": "Усильте свой ум ежедневными упражнениями.",
+      "start_description_2": "Начните думать нестандартно.",
+      "start_description_3": "Создайте свой собственный мир творчества.",
       "boosting": "Начать упражнения для мозга",
       "40sum": "посчитать 40 сумм: ",
       "remember7-1": "запомнить 7 чисел и удерживать их в памяти 20 секунд: ",
@@ -42,7 +44,9 @@
 
   var exercises_en = {
     values: {
-      "description": "Boost your mind with daily exercises",
+      "start_description_1": "Boost your mind with daily exercises",
+      "start_description_2": "Start thinking out of the box.",
+      "start_description_3": "Create your own world of creativity.",
       "boosting": "Start boosting the mind",
       "40sum": "count 40 amounts: ",
       "remember7-1": "remember 7 numbers and hold them in memory for 20 seconds:",
@@ -87,7 +91,11 @@
     $("#phrase-tip").text(i18n_translate("axone_title"));
     $("#action-button>.boosting").text(i18n_translate("boosting"));
     $("#action-button>.repeat").text(i18n_translate("repeat"));
-    $(".start_description").text(i18n_translate("description"));
+
+    $(".start_description #description_1").text(i18n_translate("start_description_1"));
+    $(".start_description #description_2").text(i18n_translate("start_description_2"));
+    $(".start_description #description_3").text(i18n_translate("start_description_3"));
+
     $(".end_description").html(i18n_translate("end_description"));
     $("#pause-wrap>.title>a").text(i18n_translate("pause"));
     $("#pause-wrap .link_1>a").text(i18n_translate("link_1"));

@@ -40,13 +40,23 @@
 
             </script>
 
-            <!--<div class="start_description" id="description"></div>-->
-
             <div class="start_description" id="description">
-                <span id="description_1">Boost your mind with daily exercises.</span>
-                <span id="description_2">Start thinking out of the box.</span>
-                <span id="description_3">Create your own world of creativity.</span>
+                <span id="description_1" data-show-next="description_2">Boost your mind with daily exercises.</span>
+                <span id="description_2" data-show-next="description_3" style="display: none;">Start thinking out of the box.</span>
+                <span id="description_3" data-show-next="description_1" style="display: none;">Create your own world of creativity.</span>
             </div>
+            <script>
+                function switchSpans(toHide, toShow) {
+                    setTimeout(function () {
+                        if(toHide) $("#" + toHide).hide();
+                        var toShowSpan = $("#" + toShow);
+                        toShowSpan.show();
+                        var toShowNext = toShowSpan.attr("data-show-next");
+                        if(toShowNext) switchSpans(toShow /*Hide what was shown*/, toShowNext)
+                    }, 5000)
+                }
+                switchSpans(undefined, "description_1");
+            </script>
             <div class="blueDotsContainer">
                 <div class="dot dot1"></div>
                 <div class="dot dot2"></div>
