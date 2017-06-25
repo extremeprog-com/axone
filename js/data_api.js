@@ -33,7 +33,7 @@
   function getDataForCard() {
     var text = $("#phrased").text();
     var regex = /(.*:)(.*)/;
-    var html = "<span class='bold'>" + text.match(regex)[1] + "</span> " + text.match(regex)[2];
+    var html = "<span class='bold'>" + text.match(regex)[1] + "</span><br> " + text.match(regex)[2];
     return html;
   }
 })();
