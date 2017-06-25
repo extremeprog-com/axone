@@ -50,7 +50,7 @@
       "boosting": "Start boosting the mind",
       "40sum": "count 40 amounts: ",
       "remember7-1": "remember 7 numbers and hold them in memory for 20 seconds:",
-      "remember7-2": "remember 7 numbers and hold them in memory for 20 seconds:",
+      "remember7-2": "remember 7 words and hold them in memory for 20 seconds:",
       "poem": "compose a verse with words",
       "append": "connect 2 words in as many ways as possible:",
       "figureOut": "think of a story using words:",

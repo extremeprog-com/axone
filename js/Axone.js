@@ -50,6 +50,7 @@ var Axone = {
         }
 
         function nextArrayItem(array, num) {
+            console.log("num = ", num);
             num = num % array.length;
             return array[num];
         }

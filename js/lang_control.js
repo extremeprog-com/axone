@@ -1,11 +1,11 @@
 /**
  * Created by trean on 09.06.17.
  */
+
 var words, words_emotions;
+
 (function () {
   // language changing
-
-  var words, words_emotions;
 
   if (!window.localStorage["AXONE_LANG"]) {
     window.LANG = navigator.language !== "RU" ? "EN" : "RU";
@@ -14,7 +14,8 @@ var words, words_emotions;
     window.LANG = window.localStorage.getItem("AXONE_LANG");
   }
   setSelectedLang(window.LANG);
-  if (typeof words !== "undefined") chooseWordsArr();
+  //if (typeof words !== "undefined")
+    chooseWordsArr();
 
   $("#lang").change(function () {
     console.log("changed!");
@@ -30,11 +31,13 @@ var words, words_emotions;
 
   function chooseWordsArr (lang) {
     if (window.LANG === "EN") {
+      console.log('chooseWordsArr')
+      console.log(words_emotions_en)
       words = words_en;
-     words_emotions = words_emotions_en;
+      words_emotions = words_emotions_en;
     } else if (window.LANG === "RU") {
       words = words_ru;
-     words_emotions = words_emotions_ru;
+      words_emotions = words_emotions_ru;
     }
 
 
