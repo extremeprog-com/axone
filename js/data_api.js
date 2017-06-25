@@ -13,8 +13,13 @@
     } else if (event.data === "getCard") {
       // data to sending to Home Automation
       var data = JSON.stringify(["axone", getDataForCard()]);
-      console.log(data, ": from Axone");
       event.source.postMessage(data, HA_URL);
+    } else if (event.data === "setLang:EN") {
+      window.LANG = "EN";
+      console.log("now LANG = " + window.LANG);
+    } else if (event.data === "setLang:RU") {
+      window.LANG = "RU";
+      console.log("now LANG = " + window.LANG);
     }
   }
 
@@ -26,7 +31,9 @@
   }
 
   function getDataForCard() {
-    //console.log("1", $("#phrased").text(), ": from Axone");
-    return $("#phrased").text();
+    var text = $("#phrased").text();
+    var regex = /(.*:)(.*)/;
+    var html = "<span class='bold'>" + text.match(regex)[1] + "</span> " + text.match(regex)[2];
+    return html;
   }
 })();

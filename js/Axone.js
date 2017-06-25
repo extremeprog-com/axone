@@ -29,7 +29,6 @@ var Axone = {
     , generateExercise: function() {
 
         function randomArrayItem(array, num, local_num) {
-            console.log(num, local_num);
 
             if(local_num) {
                 num += 101 * local_num;
@@ -50,7 +49,6 @@ var Axone = {
         }
 
         function nextArrayItem(array, num) {
-            console.log("num = ", num);
             num = num % array.length;
             return array[num];
         }
