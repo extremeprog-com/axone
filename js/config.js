@@ -91,11 +91,6 @@
     $("#phrase-tip").text(i18n_translate("axone_title"));
     $("#action-button>.boosting").text(i18n_translate("boosting"));
     $("#action-button>.repeat").text(i18n_translate("repeat"));
-
-    $(".start_description #description_1").text(i18n_translate("start_description_1"));
-    $(".start_description #description_2").text(i18n_translate("start_description_2"));
-    $(".start_description #description_3").text(i18n_translate("start_description_3"));
-
     $(".end_description").html(i18n_translate("end_description"));
     $("#pause-wrap>.title>a").text(i18n_translate("pause"));
     $("#pause-wrap .link_1>a").text(i18n_translate("link_1"));
