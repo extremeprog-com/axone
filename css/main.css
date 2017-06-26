@@ -17,7 +17,8 @@ body { background-color: #D0021B; color: #4E4C4C;  }
 
     #text-wrap { position: absolute; top: 21em; left: 9.53em; width: 100%; }
     #logo { font-size: 4.375em; font-weight: 800; }
-    #description { min-height: 2.5em; margin-top: 1.2em; line-height: 1.2em; font-size: 2.5em; width: 22em;  font-weight: 500; }
+    #description { min-height: 2.8em; margin-top: 1.2em; line-height: 1.2em; font-size: 3rem; width: 22em;  font-weight: 500; }
+    #description span { font-size: 4rem; }
 
     .phrases-column { padding-right: 9em; color: #5B6B79; }
 
