@@ -162,7 +162,6 @@ var Axone = {
         clearInterval(this._drawTimer);
 
         this._drawTimer = setInterval(function() {
-            $('#phrase-line').css('width', 100 * (new Date - _drawTimeStart) / _this._phraseInterval + '%') ;
             $('.ball').css('width', 100 * (new Date - _drawTimeStart) / _this._phraseInterval + 30 + '%') ;
             $('.ball').css('height', 100 * (new Date - _drawTimeStart) / _this._phraseInterval + 30 + '%') ;
         }, 250);
