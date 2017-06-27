@@ -7,15 +7,15 @@ var words, words_emotions;
 (function () {
   // language changing
 
-  if (!window.localStorage["AXONE_LANG"]) {
-    window.LANG = navigator.language !== "RU" ? "EN" : "RU";
-    window.localStorage.setItem("AXONE_LANG", window.LANG);
-  } else {
-    window.LANG = window.localStorage.getItem("AXONE_LANG");
-  }
+  window.LANG = "EN";
+  //if (!window.localStorage["AXONE_LANG"]) {
+  //  window.LANG = navigator.language !== "RU" ? "EN" : "RU";
+  //  window.localStorage.setItem("AXONE_LANG", window.LANG);
+  //} else {
+  //  window.LANG = window.localStorage.getItem("AXONE_LANG");
+  //}
   setSelectedLang(window.LANG);
-  //if (typeof words !== "undefined")
-    chooseWordsArr();
+  chooseWordsArr();
 
   $("#lang").change(function () {
     var oldLang = window.LANG;
