@@ -104,7 +104,7 @@ body { background-color: #D0021B; color: #4E4C4C;  }
         transform: translate(-50%, -75%); visibility: hidden; max-width: 40em; }
 
         #phrase-tip { color: #9B9B9B; font-size: 2em; font-weight: 300; line-height: 1em;}
-        #phrase { font-size: 4rem; font-weight: 300; line-height: 0.9em; }
+        #phrase { font-size: 4rem; font-weight: 300; line-height: 4rem; }
         #phrase .small { font-size: 2rem; line-height: 0.5em}
 
         #pause-wrap ul li { list-style-type: none; display: inline-block; font-size: 1.5em; margin-top: 1em; margin-bottom: 3em; margin-left: 6em; }
