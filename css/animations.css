@@ -20,7 +20,7 @@ span.word {
 }
 
 .blueDotsContainer {
-    width: 100%;
+    width: 60em;
     height: 80%;
     position: absolute;
     top: 0;
@@ -31,10 +31,10 @@ span.word {
     position: absolute;
     transform: scale(0);
     border-radius: 50%;
-    background: blue;
+    /*background: blue;*/
     width: 3rem;
     height: 3rem;
-    animation: pulse ease-in-out infinite 4.75s;
+    animation: pulse ease-in-out 1 4.75s;
     z-index: -1;
 }
 
@@ -48,7 +48,6 @@ span.word {
     top: 60%;
     left: 10%;
     animation-delay: 1.35s;
-    /*animation-duration: 2s;*/
 }
 
 .dot3 {
