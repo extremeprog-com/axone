@@ -110,7 +110,7 @@
   });
 
 
-  window.setRandomColor = function () {
+  window.getRandomColor = function() {
     var colors = [
       "rgba(75, 63, 114, 1)",
       "rgba(134, 187, 216, 1)",
@@ -120,7 +120,11 @@
     ];
 
     var color = colors[Math.floor(Math.random()*colors.length)];
+    return color;
+  };
 
+  window.setRandomColor = function () {
+    var color = window.getRandomColor();
     $("body").css({"background-color": color});
     $("#phrase-line").css({"background-color": changeAlpha(color, 0.6)});
     $("#controls .stop").css({

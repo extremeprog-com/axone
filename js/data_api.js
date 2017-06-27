@@ -3,14 +3,15 @@
 
 (function () {
   "use strict";
-  var HA_URL = "http://localhost:8090";
+  var HA_URL = "*";
 
   function listener(event) {
-    if (event.origin != HA_URL) {
+    /*if (event.origin != HA_URL) {
       // ignore unknown domain
       return;
 
-    } else if (event.data === "getCard") {
+    } else*/
+    if (event.data === "getCard") {
       // data to sending to Home Automation
       var data = JSON.stringify(["axone", getDataForCard()]);
       event.source.postMessage(data, HA_URL);
