@@ -115,11 +115,18 @@
 
   window.getRandomColor = function() {
     var colors = [
-      "rgba(75, 63, 114, 1)",
-      "rgba(134, 187, 216, 1)",
-      "rgba(255, 200, 87, 1)",
-      "rgba(255, 16, 83, 1)",
-      "rgba(169, 229, 187, 1)"
+      "rgba(28, 119, 195, 1)",
+      "rgba(208, 2, 27, 1)",
+      "rgba(177, 193, 192, 1)",
+      "rgba(240, 207, 101, 1)",
+      "rgba(197, 216, 109, 1)"
+
+      // alternative pallete
+      //"rgba(75, 63, 114, 1)",
+      //  "rgba(134, 187, 216, 1)",
+      //  "rgba(255, 200, 87, 1)",
+      //  "rgba(255, 16, 83, 1)",
+      //  "rgba(169, 229, 187, 1)"
     ];
 
     var color = colors[Math.floor(Math.random()*colors.length)];
