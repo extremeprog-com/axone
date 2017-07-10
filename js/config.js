@@ -62,7 +62,7 @@
       "pause": "Pause",
       "link_1": "Go to main page",
       "link_2": "Contacts",
-      "pause_title": "The essence of the exercise is to draw a quickly an unusual phrase. This turn on imagination and involves you in the process of creating original ideas.",
+      "pause_title": "These exercises involve you in the process of creating original ideas.",
       "warning": "After clicking on the button, the phrase will change.",
       "tips": "Did you like the exercise? Tell about it to your friends.",
       "end_description": "Take pictures of the pictures that you liked most, and lay out in Instagram with a tag \<a href=\"https:\/\/instagram.com\/explore\/tags\/crazydrawin/\" target=\"_blank\" style=\"color: \#D0021B;\"\>\#crazydrawin\<\/a\>",

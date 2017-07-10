@@ -102,6 +102,7 @@ body { background-color: #D0021B; color: #4E4C4C;  }
     #pause-wrap { position: absolute; top: 50%; text-align: center; left: 50%;
         -webkit-transform: translate(-50%, -75%);
         transform: translate(-50%, -75%); visibility: hidden; max-width: 40em; }
+        #pause-title { font-size: 4rem; line-height: 4rem; }
 
         #phrase-tip { color: #9B9B9B; font-size: 2em; font-weight: 300; line-height: 1em;}
         #phrase { font-size: 4rem; font-weight: 300; line-height: 4rem; }
