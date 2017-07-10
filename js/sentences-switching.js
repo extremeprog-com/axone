@@ -73,10 +73,20 @@
     var dot1 = $("<div class='dot dot1'></div>");
     var dot2 = $("<div class='dot dot2'></div>");
     dotContainer.append(dot1, dot2);
-    dotContainer.children().each(function (idx, dot) {
-      $(dot).css("background", getRandomColor());
-    });
+    setDotRandomColor(dotContainer.children()[0], dotContainer.children()[1]);
     SetDotRandomPosition();
+  }
+
+  function setDotRandomColor(dot1, dot2) {
+    var col1 = getRandomColor();
+    var col2 = getRandomColor();
+
+    if (col1 != col2) {
+      $(dot1).css("background", col1);
+      $(dot2).css("background", col2);
+    } else {
+      setDotRandomColor(dot1, dot2);
+    }
   }
 
   function getRandomArbitrary(min, max) {
