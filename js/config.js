@@ -31,6 +31,7 @@
       "end_description": "Фотографируй рисунки, которые тебе понравились больше всего, и выкладывай в Instagram с тэгом \<a href=\"https:\/\/instagram.com\/explore\/tags\/crazydrawin/\" target=\"_blank\" style=\"color: \#D0021B;\"\>\#crazydrawin\<\/a\>",
       "repeat": "Повторить упражнение",
       "end_logo": "Упражнение закончено",
+      "end_subtitle": "Но не ваше самосовершенствование",
       "share_fb": "Поделиться в Facebook",
       "share_vk": "Поделиться в Vkontakte",
       "share_tw": "Поделиться в Twitter",
@@ -68,6 +69,7 @@
       "end_description": "Take pictures of the pictures that you liked most, and lay out in Instagram with a tag \<a href=\"https:\/\/instagram.com\/explore\/tags\/crazydrawin/\" target=\"_blank\" style=\"color: \#D0021B;\"\>\#crazydrawin\<\/a\>",
       "repeat": "Repeat exercise",
       "end_logo": "Exercise is over",
+      "end_subtitle": "But your evolution will never be over.<br>Be smart!",
       "share_fb": "Share with Facebook",
       "share_vk": "Share with Vkontakte",
       "share_tw": "Share with Twitter",
@@ -99,6 +101,7 @@
     $("#pause-title").text(i18n_translate("pause_title"));
     $("#tips").text(i18n_translate("tips"));
     $("#logo.ended").text(i18n_translate("end_logo"));
+    $(".ended__subtitle").html(i18n_translate("end_subtitle"));
     $("#logo.contacts").text(i18n_translate("about_hed"));
     $(".contacts_description").text(i18n_translate("contacts_description"));
     $("#return-mainpage").text(i18n_translate("link_1"));
