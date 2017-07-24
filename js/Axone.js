@@ -20,7 +20,7 @@ var Axone = {
         CatchEvent(Event_DOM_Init);
 
         var phrase = this.generateExercise();
-        $('#phrased').html(phrase);
+        $('#phrased').hide().html(phrase).fadeIn(400);
         $('#grid li').removeClass('complete');
 
         FireEvent(new Axone_PhraseInited({phrase: phrase}));
@@ -123,7 +123,7 @@ var Axone = {
         if( this._currentPhraseNumber < this.NUM_PHRASES ) {
             this._currentPhraseNumber++;
             var phrase = this.generateExercise();
-            $('#phrased').html(phrase);
+            $('#phrased').hide().html(phrase).fadeIn(400);
             FireEvent(new Axone_PhraseChanged({phrase: phrase, time: time}));
         }
     }
@@ -138,7 +138,7 @@ var Axone = {
         CatchEvent(Axone_Controls_PlayClick);
 
         var phrase = this.generateExercise();
-        $('#phrased').html(phrase);
+        $('#phrased').hide().html(phrase).fadeIn(400);
 
         FireEvent(new Axone_PhraseUpdated({phrase: phrase}));
 

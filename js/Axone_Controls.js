@@ -19,13 +19,13 @@ var Axone_Controls = {
             if( _this._pauseState ) {
                 $(".ball").css("display", "inline-block");
                 $(".ball-wrapper").css("display", "block");
-                $("#phrased").css("display", "block");
+                $("#phrased").show().fadeIn(400);
                 _this._exerciseState.go('Playing');
                 FireEvent(new Axone_Controls_PlayClick());
             } else {
                 $(".ball").css("display", "none");
                 $(".ball-wrapper").css("display", "none");
-                $("#phrased").css("display", "none");
+                $("#phrased").hide().fadeIn(700);
                 _this._exerciseState.go('Paused');
                 FireEvent(new Axone_Controls_PauseClick());
                 Axone_Voice.currentAudioTrack.pause();
