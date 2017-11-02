@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+_draft
+.idea
+server/node_modules
+containers/axone/root/app
+_draft

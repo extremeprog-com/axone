@@ -14,13 +14,13 @@ var Axone = {
     , _timeoutVar         : null
     , _currentPhraseNumber: 0
     , phrases: []
-    , NUM_PHRASES: 20
+    , NUM_PHRASES: 2000
 
     , init: function() {
         CatchEvent(Event_DOM_Init);
 
         var phrase = this.generateExercise();
-        $('#phrased').html(phrase);
+        $('#phrased').hide().html(phrase).fadeIn(400);
         $('#grid li').removeClass('complete');
 
         FireEvent(new Axone_PhraseInited({phrase: phrase}));
@@ -48,31 +48,41 @@ var Axone = {
             return array[random];
         }
 
+        function nextArrayItem(array, num) {
+            num = num % array.length;
+            return array[num];
+        }
+
         var exercises = [
             //'посчитать 20 сумм: random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()',
-            'посчитать 40 сумм: random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()',
-            //'посчитать 5 сумм: random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()',
-            'запомнить 7 чисел и удерживать их в памяти 20 секунд: random_num(), random_num(), random_num(), random_num(), random_num(), random_num(), random_num()',
-            'запомните 7 слов, удерживайте их 20 секунд: random_word(), random_word(), random_word(), random_word(), random_word(), random_word(), random_word()',
-            'сочинить стих со словами random_word(), random_word()',
-            'соединить 2 слова максимально возможным количеством способов: random_word(), random_word()',
-            'придумать историю использующую слова: random_word(), random_word(), random_word(), random_word()',
-            'нарисовать random_word()',
-            'используя слова: random_word(), random_word(), рассказать о слове random_word()'
+           //'посчитать 5 сумм: random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()',
+
+            '<span class=\"small\">' + i18n_translate("40sum") + ' random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num(), random_num()+random_num()' + '</span>',
+          i18n_translate("remember7-1") + ' random_num(), random_num(), random_num(), random_num(), random_num(), random_num(), random_num()',
+          i18n_translate("remember7-2") + ' random_word(), random_word(), random_word(), random_word(), random_word(), random_word(), random_word()',
+          i18n_translate("poem") + ' random_word(), random_word()',
+          i18n_translate("append") + ' random_word(), random_word()',
+          i18n_translate("figureOut") + ' random_word(), random_word(), random_word(), random_word()',
+          i18n_translate("draw") + ' \"random_words_emotions() random_word()\"',
+          i18n_translate("use") + ' random_word(), random_word(), ' + i18n_translate("tell") + ' random_word()'
         ];
 
 
-        var exercise = randomArrayItem(exercises, Axone._currentPhraseNumber);
+        // var exercise = randomArrayItem(exercises, Axone._currentPhraseNumber);
+        var exercise = nextArrayItem(exercises, Axone._currentPhraseNumber);
 
         exercise = exercise
             .replace(/random_word\(\)/g, function(e, i) {
                 return randomArrayItem(words, Axone._currentPhraseNumber, i)
             })
+            .replace(/random_words_emotions\(\)/g, function(e, i) {
+                return randomArrayItem(words_emotions, Axone._currentPhraseNumber, i)
+            })
             .replace(/random_num\(\)/g, function() {
                 return parseInt(Math.random() * 99)
             })
             .replace(/\+/g, function() {
-                return ' плюс '
+                return ' ' + i18n_translate("plus") + ' '
             })
         ;
 
@@ -82,6 +92,7 @@ var Axone = {
         //
         //localStorage.phrases = JSON.stringify(this.phrases);
 
+        setRandomColor();
         return exercise;
     }
 
@@ -112,7 +123,7 @@ var Axone = {
         if( this._currentPhraseNumber < this.NUM_PHRASES ) {
             this._currentPhraseNumber++;
             var phrase = this.generateExercise();
-            $('#phrased').html(phrase);
+            $('#phrased').hide().html(phrase).fadeIn(400);
             FireEvent(new Axone_PhraseChanged({phrase: phrase, time: time}));
         }
     }
@@ -127,7 +138,7 @@ var Axone = {
         CatchEvent(Axone_Controls_PlayClick);
 
         var phrase = this.generateExercise();
-        $('#phrased').html(phrase);
+        $('#phrased').hide().html(phrase).fadeIn(400);
 
         FireEvent(new Axone_PhraseUpdated({phrase: phrase}));
 
@@ -151,7 +162,8 @@ var Axone = {
         clearInterval(this._drawTimer);
 
         this._drawTimer = setInterval(function() {
-            $('#phrase-line').css('width', 100 * (new Date - _drawTimeStart) / _this._phraseInterval + '%') ;
+            $('.ball').css('width', 100 * (new Date - _drawTimeStart) / _this._phraseInterval + 30 + '%') ;
+            $('.ball').css('height', 100 * (new Date - _drawTimeStart) / _this._phraseInterval + 30 + '%') ;
         }, 250);
     }
     , endDrawTimer: function() {
